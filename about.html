@@ -3,13 +3,19 @@
 
 <head>
     <meta charset="utf-8">
-    <title>KOPPEE - Coffee Shop HTML Template</title>
+    <title>About Us | Froth & Frost</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Free Website Template" name="keywords">
-    <meta content="Free Website Template" name="description">
+    <meta content="coffee shop, juice bar, cold-pressed juice, specialty coffee" name="keywords">
+    <meta content="Froth & Frost is a cozy coffee and fresh juice bar serving specialty coffee, cold-pressed juices, and smoothies made fresh daily." name="description">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="About Us | Froth & Frost">
+    <meta property="og:description" content="Froth & Frost is a cozy coffee and fresh juice bar serving specialty coffee, cold-pressed juices, and smoothies made fresh daily.">
+    <meta property="og:image" content="img/logo.png">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="img/favicon-32.png" rel="icon" type="image/png">
+    <link href="img/favicon-192.png" rel="apple-touch-icon">
 
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -17,6 +23,9 @@
 
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- AOS Animate On Scroll -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
@@ -31,7 +40,7 @@
     <div class="container-fluid p-0 nav-bar">
         <nav class="navbar navbar-expand-lg bg-none navbar-dark py-3">
             <a href="index.html" class="navbar-brand px-lg-4 m-0">
-                <h1 class="m-0 display-4 text-uppercase text-white">KOPPEE</h1>
+                <img src="img/logo-nav.png" alt="Froth & Frost - Coffee & Juice Bar" class="navbar-logo">
             </a>
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
@@ -74,29 +83,29 @@
     <!-- About Start -->
     <div class="container-fluid py-5">
         <div class="container">
-            <div class="section-title">
+            <div class="section-title" data-aos="fade-up">
                 <h4 class="text-primary text-uppercase" style="letter-spacing: 5px;">About Us</h4>
-                <h1 class="display-4">Serving Since 1950</h1>
+                <h1 class="display-4">Crafted With Care, Served Fresh</h1>
             </div>
             <div class="row">
                 <div class="col-lg-4 py-0 py-lg-5">
                     <h1 class="mb-3">Our Story</h1>
-                    <h5 class="mb-3">Eos kasd eos dolor vero vero, lorem stet diam rebum. Ipsum amet sed vero dolor sea</h5>
-                    <p>Takimata sed vero vero no sit sed, justo clita duo no duo amet et, nonumy kasd sed dolor eos diam lorem eirmod. Amet sit amet amet no. Est nonumy sed labore eirmod sit magna. Erat at est justo sit ut. Labor diam sed ipsum et eirmod</p>
-                    <a href="" class="btn btn-secondary font-weight-bold py-2 px-4 mt-2">Learn More</a>
+                    <h5 class="mb-3">Where great coffee meets fresh-pressed juice</h5>
+                    <p>Froth & Frost started with a simple idea: why choose between your morning coffee and your favorite fresh juice? We bring both together under one roof, made fresh daily with quality ingredients and a lot of care.</p>
+                    <a href="contact.html" class="btn btn-secondary font-weight-bold py-2 px-4 mt-2">Learn More</a>
                 </div>
                 <div class="col-lg-4 py-5 py-lg-0" style="min-height: 500px;">
                     <div class="position-relative h-100">
-                        <img class="position-absolute w-100 h-100" src="img/about.png" style="object-fit: cover;">
+                        <img class="position-absolute w-100 h-100" src="img/about.png" alt="Inside Froth & Frost coffee and juice bar" style="object-fit: cover;">
                     </div>
                 </div>
                 <div class="col-lg-4 py-0 py-lg-5">
                     <h1 class="mb-3">Our Vision</h1>
-                    <p>Invidunt lorem justo sanctus clita. Erat lorem labore ea, justo dolor lorem ipsum ut sed eos, ipsum et dolor kasd sit ea justo. Erat justo sed sed diam. Ea et erat ut sed diam sea ipsum est dolor</p>
-                    <h5 class="mb-3"><i class="fa fa-check text-primary mr-3"></i>Lorem ipsum dolor sit amet</h5>
-                    <h5 class="mb-3"><i class="fa fa-check text-primary mr-3"></i>Lorem ipsum dolor sit amet</h5>
-                    <h5 class="mb-3"><i class="fa fa-check text-primary mr-3"></i>Lorem ipsum dolor sit amet</h5>
-                    <a href="" class="btn btn-primary font-weight-bold py-2 px-4 mt-2">Learn More</a>
+                    <p>We want Froth & Frost to be the neighborhood spot where you start your day right — whether that's a hot latte to wake up or a cold-pressed juice to refresh. Quality, freshness, and friendly service guide everything we do.</p>
+                    <h5 class="mb-3"><i class="fa fa-check text-primary mr-3"></i>Freshly brewed coffee, every cup</h5>
+                    <h5 class="mb-3"><i class="fa fa-check text-primary mr-3"></i>Cold-pressed juices made daily</h5>
+                    <h5 class="mb-3"><i class="fa fa-check text-primary mr-3"></i>Warm, friendly service</h5>
+                    <a href="menu.html" class="btn btn-primary font-weight-bold py-2 px-4 mt-2">Learn More</a>
                 </div>
             </div>
         </div>
@@ -109,13 +118,13 @@
         <div class="row mx-0 pt-5 px-sm-3 px-lg-5 mt-4">
             <div class="col-lg-3 col-md-6 mb-5">
                 <h4 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;">Get In Touch</h4>
-                <p><i class="fa fa-map-marker-alt mr-2"></i>123 Street, New York, USA</p>
-                <p><i class="fa fa-phone-alt mr-2"></i>+012 345 67890</p>
-                <p class="m-0"><i class="fa fa-envelope mr-2"></i>info@example.com</p>
+                <p><i class="fa fa-map-marker-alt mr-2"></i>[Add your street address]</p>
+                <p><i class="fa fa-phone-alt mr-2"></i>[Add phone number]</p>
+                <p class="m-0"><i class="fa fa-envelope mr-2"></i>[Add contact email]</p>
             </div>
             <div class="col-lg-3 col-md-6 mb-5">
                 <h4 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;">Follow Us</h4>
-                <p>Amet elitr vero magna sed ipsum sit kasd sea elitr lorem rebum</p>
+                <p>Follow us on social media for daily specials, new menu drops, and behind-the-scenes moments.</p>
                 <div class="d-flex justify-content-start">
                     <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
                     <a class="btn btn-lg btn-outline-light btn-lg-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
@@ -134,19 +143,19 @@
             </div>
             <div class="col-lg-3 col-md-6 mb-5">
                 <h4 class="text-white text-uppercase mb-4" style="letter-spacing: 3px;">Newsletter</h4>
-                <p>Amet elitr vero magna sed ipsum sit kasd sea elitr lorem rebum</p>
+                <p>Get our latest offers and seasonal menu updates straight to your inbox.</p>
                 <div class="w-100">
                     <div class="input-group">
                         <input type="text" class="form-control border-light" style="padding: 25px;" placeholder="Your Email">
                         <div class="input-group-append">
-                            <button class="btn btn-primary font-weight-bold px-3">Sign Up</button>
+                            <button class="btn btn-secondary font-weight-bold px-3">Sign Up</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="container-fluid text-center text-white border-top mt-4 py-4 px-sm-3 px-md-5" style="border-color: rgba(256, 256, 256, .1) !important;">
-            <p class="mb-2 text-white">Copyright &copy; <a class="font-weight-bold" href="#">Domain</a>. All Rights Reserved.</a></p>
+            <p class="mb-2 text-white">Copyright &copy; <a class="font-weight-bold" href="#">Froth & Frost</a>. All Rights Reserved.</p>
             <p class="m-0 text-white">Designed by <a class="font-weight-bold" href="https://htmlcodex.com">HTML Codex</a> Distributed by <a href="https://themewagon.com" target="_blank">ThemeWagon</a></p>
         </div>
     </div>
@@ -172,6 +181,8 @@
     <script src="mail/contact.js"></script>
 
     <!-- Template Javascript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
     <script src="js/main.js"></script>
 </body>
 

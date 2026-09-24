@@ -31,7 +31,28 @@
         $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
         return false;
     });
-    
+
+
+    // Sticky navbar on scroll (desktop only; mobile nav is already a solid inline bar)
+    $(window).scroll(function () {
+        if ($(window).width() > 991 && $(this).scrollTop() > 50) {
+            $('.nav-bar').addClass('scrolled');
+        } else {
+            $('.nav-bar').removeClass('scrolled');
+        }
+    });
+
+
+    // Scroll-reveal animations
+    if (window.AOS) {
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 80
+        });
+    }
+
+
 
     // Date and time picker
     $('.date').datetimepicker({

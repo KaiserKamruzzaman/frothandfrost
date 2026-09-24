@@ -1,7 +1,7 @@
 /******* Bootstrap Theming ********/
 
-$primary: #DA9F5B;
-$secondary: #33211D;
+$primary: #3B2314;
+$secondary: #E8790E;
 $light: #FFFBF2;
 $dark: #111111;
 
@@ -15,7 +15,7 @@ $body-bg: $light;
 
 $body-color: #555555;
 
-$headings-color: $secondary;
+$headings-color: $primary;
 
 $display1-size: 8rem;
 
@@ -108,7 +108,18 @@ h6,
 @media (max-width: 991.98px) {
     .container-fluid.nav-bar {
         position: relative;
-        background: $secondary;
+        background: $primary;
+    }
+}
+
+.navbar-brand .navbar-logo {
+    height: 70px;
+    width: auto;
+}
+
+@media (max-width: 991.98px) {
+    .navbar-brand .navbar-logo {
+        height: 56px;
     }
 }
 
@@ -122,7 +133,7 @@ h6,
 
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link.active {
-    color: $primary;
+    color: $secondary;
 }
 
 .overlay-top::before,
@@ -150,7 +161,7 @@ h6,
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(51, 33, 29, .7);
+    background: rgba($primary, .7);
     z-index: 1;
 }
 
@@ -235,8 +246,93 @@ h6,
 .page-header,
 .offer,
 .footer {
-    background: linear-gradient(rgba(51, 33, 29, .9), rgba(51, 33, 29, .9)), url(../img/bg.jpg);
+    background: linear-gradient(rgba($primary, .9), rgba($primary, .9)), url(../img/bg.jpg);
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+/********** Sticky Navbar **********/
+.nav-bar.scrolled {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: $primary;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, .2);
+    transition: background .3s ease, box-shadow .3s ease;
+}
+
+/********** Hover Polish **********/
+.menu-img-wrap,
+.service-img-wrap {
+    overflow: hidden;
+    display: block;
+}
+
+.menu-img-wrap img,
+.service-img-wrap img {
+    transition: transform .4s ease;
+}
+
+.menu-img-wrap:hover img,
+.service-img-wrap:hover img {
+    transform: scale(1.08);
+}
+
+.menu-price {
+    transition: transform .3s ease;
+}
+
+.row.align-items-center:hover .menu-price {
+    transform: scale(1.1);
+}
+
+.btn {
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .15);
+}
+
+/********** Hero Steam Accent **********/
+.steam-accent {
+    position: absolute;
+    width: 3px;
+    height: 40px;
+    background: linear-gradient(to top, rgba($light, 0), rgba($light, .5));
+    border-radius: 3px;
+    -webkit-animation: steamDrift 3s ease-in-out infinite;
+    animation: steamDrift 3s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@-webkit-keyframes steamDrift {
+    0% {
+        transform: translateY(0) translateX(0) scaleY(1);
+        opacity: 0;
+    }
+    30% {
+        opacity: .8;
+    }
+    100% {
+        transform: translateY(-40px) translateX(6px) scaleY(1.4);
+        opacity: 0;
+    }
+}
+
+@keyframes steamDrift {
+    0% {
+        transform: translateY(0) translateX(0) scaleY(1);
+        opacity: 0;
+    }
+    30% {
+        opacity: .8;
+    }
+    100% {
+        transform: translateY(-40px) translateX(6px) scaleY(1.4);
+        opacity: 0;
+    }
 }
