@@ -1,14 +1,25 @@
 /* ============ Menu Landing Page ============ */
 
 .menu-groups {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 30px;
 }
 
-@media (min-width: 992px) {
-    .menu-groups {
-        grid-template-columns: repeat(4, 1fr);
+.menu-group-card {
+    flex: 0 1 calc(50% - 15px);
+}
+
+@media (min-width: 768px) {
+    .menu-group-card {
+        flex: 0 1 calc(33.333% - 20px);
+    }
+}
+
+@media (min-width: 1200px) {
+    .menu-group-card {
+        flex: 0 1 calc(20% - 24px);
     }
 }
 
@@ -46,6 +57,10 @@
 
 .menu-group-card.tile-cold .tile {
     background: linear-gradient(155deg, #1f4a48 0%, #2f9187 140%);
+}
+
+.menu-group-card.tile-juice .tile {
+    background: linear-gradient(155deg, #4c7a1f 0%, #a3c93a 140%);
 }
 
 .menu-group-card.tile-desserts .tile {
@@ -138,8 +153,14 @@
 }
 
 .menu-category {
-    scroll-margin-top: 90px;
+    scroll-margin-top: 115px;
     margin-bottom: 55px;
+}
+
+@media (max-width: 991.98px) {
+    .menu-category {
+        scroll-margin-top: 20px;
+    }
 }
 
 .menu-category-header {
